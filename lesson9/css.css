@@ -1,0 +1,109 @@
+body {
+  font-family: "Segoe UI";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.form {
+  max-width: 400px;
+  border-radius: 10px;
+  border: 2px solid #333;
+  margin: 30px;
+  width: 100%;
+  padding: 20px;
+}
+
+fieldset {
+  border: none;
+}
+
+p,
+h3 {
+  margin: 15px 0px 10px;
+}
+
+textarea {
+  resize: vertical;
+  padding: 6px 6px;
+  border-radius: 4px;
+  min-width: 100%;
+  min-height: 50px;
+  max-height: 100px;
+}
+
+input {
+  padding: 6px 6px;
+  border-width: 1px;
+  border-radius: 5px;
+  min-width: 100%;
+}
+
+.input:focus-visible,
+.buttun:focus-visible,
+.cnopka:focus-visible {
+  outline: 2px solid rgb(138, 43, 226);
+  outline-offset: 1px;
+}
+
+.label-checkbox {
+  padding-left: 22px;
+}
+
+.label {
+  display: flex;
+}
+
+.cnopka {
+  cursor: pointer;
+  position: absolute;
+  appearance: none;
+}
+.cnopka::after {
+  content: "";
+  margin-left: -22px;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #333;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cnopka:checked::after {
+  background: url("check-icon.svg") no-repeat rgb(138, 43, 226);
+}
+
+.button {
+  margin-left: 13px;
+  padding-inline: 10px;
+  padding-block: 3px;
+  border-radius: 4px;
+  background-color: rgb(138, 43, 226);
+  color: aliceblue;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.button:hover {
+  opacity: 0.5;
+}
+
+.button:disabled,
+.cnopka:disabled::after {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.button:not(:disabled):active {
+  background-color: rgb(88, 6, 164);
+}
+
+.inline-checkbox {
+  display: inline-block;
+}
