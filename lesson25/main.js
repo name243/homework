@@ -58,4 +58,10 @@ cloneAndModify(task);
 // };
 // callAllMethods(myObject);
 
-function callAllMethods(object) {}
+function callAllMethods(object) {
+  for (const key in object) {
+    if (typeof object[key] == "function") {
+      object[key]();
+    }
+  }
+}
